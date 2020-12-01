@@ -9,7 +9,7 @@ public class Task3 {
         int b = inputInt.nextInt();
         if (a >= b) {
             System.out.println("Некорректный ввод");
-        } else while (a < b) {
+        } else while ((a+1) < b) {
             if (a%5 == 0 && a%10 != 0) {
                 System.out.print(a + " ");
             }
