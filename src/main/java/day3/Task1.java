@@ -8,7 +8,9 @@ public class Task1 {
         String city = "";
         while (!city.equals("Stop")) {
             city = input.nextLine();
-            switch (city) {
+            if (city.equals("Stop")) {                          // по ощущениям - костыль
+                break;                                          // но как избежать - не догадался
+            } else switch (city) {
                 case "Москва":
                 case "Владивосток":
                 case "Ростов":
@@ -30,11 +32,10 @@ public class Task1 {
                     System.out.println("Германия");
                     break;
                 default:
-                    if (city.equals("Stop")) {                          // по ощущениям - костыль
-                        break;                                          // но как избежать - не догадался
-                    } else System.out.println("Неизвестная страна");
+                    System.out.println("Неизвестная страна");
                     break;
             }
         }
+        input.close();
     }
 }

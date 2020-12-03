@@ -8,16 +8,18 @@ public class Task2 {
 
         double value1;
         double value2;
-        double wrongValue2 = 0;
         double result;
 
-        while (wrongValue2 == 0) {
+        while (true) {
             value1 = input.nextDouble();
             value2 = input.nextDouble();
-            result = value1 / value2;
-            if (value2 == wrongValue2) {
+            if (value2 == 0) {
                 break;
-            } else System.out.println(result);
+            } else {
+                result = value1 / value2;
+                System.out.println(result);
+            }
         }
+        input.close();
     }
 }
