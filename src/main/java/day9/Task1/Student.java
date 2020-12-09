@@ -15,7 +15,7 @@ public class Student extends Human {
     }
 
     public void printInfo() {
-        System.out.println("Этот человек с именем " + super.getName());
+        super.printInfo();
         System.out.println("Этот студент с именем " + super.getName());
     }
 }
