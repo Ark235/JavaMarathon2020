@@ -4,12 +4,12 @@ public class Picker implements Worker {
     private double salary;
     private boolean isPayed = false;
     private Warehouse warehouse;
-    private int ordersCount = 0;
+//    private int ordersCount = 0;
 
     @Override
     public void doWork() {
         salary += 80;
-        ordersCount += 1;
+//        ordersCount += 1;
         warehouse.addPickedOrders(this);
     }
 
@@ -31,9 +31,9 @@ public class Picker implements Worker {
         return isPayed;
     }
 
-    public int getOrdersCount() {
-        return ordersCount;
-    }
+//    public int getOrdersCount() {
+//        return ordersCount;
+//    }
 
     @Override
     public String toString() {

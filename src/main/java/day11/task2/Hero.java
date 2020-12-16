@@ -1,6 +1,6 @@
 package day11.task2;
 
-public abstract class Hero implements interfacePhysAttack {
+public abstract class Hero implements PhysAttack {
 
     final int MAX_HEALTH = 100;
     final int MIN_HEALTH = 0;

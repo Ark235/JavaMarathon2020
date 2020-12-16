@@ -1,5 +1,5 @@
 package day11.task2;
 
-public interface interfaceMagicAttack {
+public interface MagicAttack {
     void magicalAttack(Hero hero);
 }

@@ -5,12 +5,14 @@ public class Warehouse {
     private int countDeliveredOrders;
 
     public int addPickedOrders(Picker picker) {
-        countPickedOrders = picker.getOrdersCount();
+//        countPickedOrders = picker.getOrdersCount();
+        countPickedOrders ++;
         return countPickedOrders;
     }
 
     public int addDeliveredOrders(Courier courier) {
-        countDeliveredOrders = courier.getOrdersCount();
+//        countDeliveredOrders = courier.getOrdersCount();
+        countDeliveredOrders ++;
         return countDeliveredOrders;
     }
 

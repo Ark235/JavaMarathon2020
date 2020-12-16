@@ -1,6 +1,6 @@
 package day11.task2;
 
-public class Paladin extends Hero implements interfaceHealer {
+public class Paladin extends Hero implements Healer {
 
     @Override
     public void healHimself() {

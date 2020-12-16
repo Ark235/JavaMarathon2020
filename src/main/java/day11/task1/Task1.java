@@ -7,8 +7,8 @@ public class Task1 {
     Courier c1 = new Courier(wh1);
     businessProcess(pick1);
     businessProcess(c1);
-    System.out.println("Количество собранных заказов у первого сборщика " + pick1.getOrdersCount());
-    System.out.println("Количество доставленных заказов у первого курьера " + c1.getOrdersCount());
+    System.out.println("Количество собранных заказов у первого сборщика " + wh1.getCountPickedOrders());
+    System.out.println("Количество доставленных заказов у первого курьера " + wh1.getCountDeliveredOrders());
     System.out.println("Количество собранных заказов на первом складе " + wh1.getCountPickedOrders());
     System.out.println("Количество доставленных заказов на первом складе " + wh1.getCountDeliveredOrders());
     System.out.println("ЗП сборщика на 1 складе " + pick1.getSalary());
@@ -21,8 +21,8 @@ public class Task1 {
     Courier c2 = new Courier(wh2);
     pick2.doWork();
     c2.doWork();
-    System.out.println("Количество собранных заказов у второго сборщика " + pick2.getOrdersCount());
-    System.out.println("Количество доставленных заказов у второго курьера " + c2.getOrdersCount());
+    System.out.println("Количество собранных заказов у второго сборщика " + wh2.getCountPickedOrders());
+    System.out.println("Количество доставленных заказов у второго курьера " + wh2.getCountDeliveredOrders());
     System.out.println("Количество собранных заказов на втором складе " + wh2.getCountPickedOrders());
     System.out.println("Количество доставленных заказов на втором складе " + wh2.getCountDeliveredOrders());
     System.out.println("ЗП сборщика на 2 складе " + pick2.getSalary());
