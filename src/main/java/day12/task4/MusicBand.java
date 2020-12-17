@@ -24,20 +24,15 @@ public class MusicBand {
         this.members.add(newMember);
     }
 
-    public void removeGroupMember(int k) {
-        this.members.remove(k);
-    }
-
-    public MusicBand(String name, int year){
+    public MusicBand(String name, int year, List<String> members){
     this.name = name;
     this.year = year;
+    this.members = members;
     }
 
     public static void transferMembers(MusicBand musicBand1, MusicBand musicBand2) {
-        for (int i = 0; i<musicBand1.members.size(); i = i) {
-            musicBand2.addGroupMember(musicBand1.members.get(i));
-            musicBand1.removeGroupMember(i);
-        }
+        musicBand2.members.addAll(musicBand1.members);
+        musicBand1.members.clear();
     }
 
     public void printMembers() {
@@ -49,8 +44,7 @@ public class MusicBand {
         return "MusicBand{" +
                 "name='" + name + '\'' +
                 ", year=" + year +
+                ", members=" + members +
                 '}';
     }
-
-
 }

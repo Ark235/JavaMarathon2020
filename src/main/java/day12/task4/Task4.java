@@ -1,14 +1,20 @@
 package day12.task4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Task4 {
     public static void main(String[] args) {
-        MusicBand mb1 = new MusicBand("Машина времени", 1985);
-        mb1.addGroupMember("Андрей Макаревич");
+        List<String> members1 = new ArrayList<>();
+        members1.add("Андрей Макаревич");
+        MusicBand mb1 = new MusicBand("Машина времени", 1985, members1);
+
 
         mb1.printMembers();
 
-        MusicBand mb2 = new MusicBand("Queen", 1980);
-        mb2.addGroupMember("Freddie Mercury");
+        List<String> members2 = new ArrayList<>();
+        members2.add("Freddie Mercury");
+        MusicBand mb2 = new MusicBand("Queen", 1980, members2);
 
         mb2.printMembers();
 
