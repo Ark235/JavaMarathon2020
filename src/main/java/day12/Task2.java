@@ -8,12 +8,8 @@ public class Task2 {
 
         List<Integer> values = new ArrayList<>();
 
-        for (int i = 0; i <= 30; i+=2) {
-            values.add(i);
-        }
-
-        for (int j = 300; j<=350; j+=2) {
-            values.add(j);
+        for (int i = 0; i <= 350; i+=2) {
+            if (i <= 30 || (i >= 300 && i<=350)) values.add(i);
         }
 
         System.out.println(values);
