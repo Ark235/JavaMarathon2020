@@ -55,8 +55,6 @@ public class User {
     /** переопределенный toString, возвращает строковое представление пользователя (Имя) */
     @Override
     public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                '}';
+        return username;
     }
 }
