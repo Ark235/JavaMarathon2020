@@ -6,8 +6,6 @@ import java.util.List;
 public class User {
     private String username; /** имя пользователя */
     private List<User> subscriptions; /** список пользователей, на которых подписан наш юзер */
-    private boolean isSubscribed;
-    private boolean isFriend;
 
     /** конструктор. Здесь инициализируем поле "подписки" пустым списком **/
     public User(String username) {
@@ -27,23 +25,23 @@ public class User {
 
     /** метод для подписки юзера на пользователя "user" */
     public void subscribe(User user) {
-    user.isSubscribed = true;
     subscriptions.add(user);
     }
 
     /** должен возвращать true, если пользователь подписан на пользователя user, и false
      * - если не подписан */
     public boolean isSubscribed(User user) {
-        return user.isSubscribed;
+        if (user.getSubscriptions().contains(this)) {
+            return true;
+        } else return false;
     }
 
     /** должен возвращать true, если пользователь user в друзьях, и false
      * - если нет */
     public boolean isFriend(User user) {
-        if (user.isSubscribed && isSubscribed) {
-            isFriend = true;
-        }
-        return isFriend;
+        if (user.getSubscriptions().contains(this) && subscriptions.contains(user)) {
+            return true;
+        } else return false;
     }
 
     /** отправляет сообщение с текстом text пользователю user. Здесь должен
